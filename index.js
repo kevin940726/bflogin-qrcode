@@ -2,9 +2,6 @@ const rp = require('request-promise');
 const cheerio = require('cheerio');
 const open = require('opn');
 
-const ACCOUNT = '<account>';
-const PASSWORD = '<password>';
-
 const jar = rp.jar();
 
 const request = rp.defaults({
@@ -107,6 +104,8 @@ async function regular () {
     );
 
   console.log(accountList);
+
+  return;
 }
 
 regular();
