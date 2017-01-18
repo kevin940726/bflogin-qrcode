@@ -19,19 +19,6 @@ async function regular () {
     )
     .then(res => res.request.uri.query.match(/skey=(\w+)&/)[1]);
 
-  const rrr = await request(`https://tw.newlogin.beanfun.com/login/id-pass_form.aspx?skey=${skey}`)
-    .then(res => cheerio.load(res))
-    .then($ => request(`https://tw.newlogin.beanfun.com/loginform.aspx?skey=${skey}&display_mode=2`, {
-      method: 'POST',
-      form: {
-        __EVENTTARGET: '__Page',
-        __EVENTARGUMENT: 'SwitchToLocalAreaQR',
-        __VIEWSTATE: $('#__VIEWSTATE').val(),
-        __VIEWSTATEGENERATOR: $('#__VIEWSTATEGENERATOR').val(),
-        ddlAuthType: 1,
-      },
-    }));
-
   console.log(skey);
 
   const qrcodeImg = await request(`https://tw.newlogin.beanfun.com/login/qr_form.aspx?skey=${skey}`)
