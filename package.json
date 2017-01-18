@@ -1,7 +1,7 @@
 {
-  "name": "bflogin",
+  "name": "bflogin-qrcode",
   "version": "0.0.1",
-  "description": "login to beanfun in Node.",
+  "description": "Login to beanfun with QRcode in Node.",
   "main": "index.js",
   "author": "Kai Hao",
   "license": "MIT",
