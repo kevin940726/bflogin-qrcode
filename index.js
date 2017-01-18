@@ -107,64 +107,6 @@ async function regular () {
     );
 
   console.log(accountList);
-
-  // const akey = await request(`https://tw.newlogin.beanfun.com/login/id-pass_form.aspx?skey=${skey}`)
-  //   .then(res => cheerio.load(res))
-  //   .then($ => request(
-  //     `https://tw.newlogin.beanfun.com/login/id-pass_form.aspx?skey=${skey}`,
-  //     {
-  //       method: 'POST',
-  //       form: {
-  //         '__EVENTTARGET': '',
-  //         '__EVENTARGUMENT': '',
-  //         '__VIEWSTATE': $('#__VIEWSTATE').val(),
-  //         '__EVENTVALIDATION': $('#__EVENTVALIDATION').val(),
-  //         '__VIEWSTATEGENERATOR': $('#__VIEWSTATEGENERATOR').val(),
-  //         'CodeTextBox': '',
-  //         'btn_login.x': '0',
-  //         'btn_login.y': '0',
-  //         'LBD_VCID_c_login_idpass_form_samplecaptcha': $('#LBD_VCID_c_login_idpass_form_samplecaptcha').val(),
-  //         't_AccountID': ACCOUNT,
-  //         't_Password': PASSWORD,
-  //       },
-  //       resolveWithFullResponse: true,
-  //     }
-  //   ))
-  //   .then(res => res.request.uri.query.split('=')[1])
-  //
-  // console.log(akey);
-  //
-  // const webtoken = await request(`https://tw.newlogin.beanfun.com/login/final_step.aspx?akey=${akey}`)
-  //   .then(res => request(
-  //     'https://tw.beanfun.com/beanfun_block/bflogin/return.aspx',
-  //     {
-  //       method: 'POST',
-  //       form: {
-  //         'SessionKey': skey,
-  //         'AuthKey': akey
-  //       }
-  //     }
-  //   ))
-  //   .then(res => jar
-  //     .getCookies('https://tw.beanfun.com/')
-  //     .find(cookie => cookie.key === 'bfWebToken')
-  //     .value
-  //   );
-  //
-  // console.log(webtoken);
-  //
-  // const accountList = await request(`https://tw.beanfun.com/beanfun_block/auth.aspx?channel=game_zone&page_and_query=game_start.aspx%3Fservice_code_and_region%3D610074_T9&web_token=${webtoken}`)
-  //   .then(res => cheerio.load(res))
-  //   .then($ => $('#ulServiceAccountList > li > div')
-  //     .toArray()
-  //     .map(cur => ({
-  //       id: cur.attribs.id,
-  //       sn: cur.attribs.sn,
-  //       name: cur.attribs.name,
-  //     }))
-  //   );
-  //
-  // console.log(accountList);
 }
 
 regular();
