@@ -13,6 +13,7 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "cheerio": "^0.22.0",
+    "crypto": "^0.0.3",
     "opn": "^4.0.2",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
